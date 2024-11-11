@@ -12,3 +12,8 @@ def register():
 
 def login ():
     return render_template('login.html', title='Авторизация')
+
+@app.errorhandler(404)
+def page404():
+    return render_template('page404.html', title='Ошибка 404')
+
